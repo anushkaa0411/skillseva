@@ -1,0 +1,50 @@
+:root {
+  --primary: #0066cc;
+  --accent: #00c896;
+  --bg: #f8f9fa;
+  --text-dark: #333;
+}
+
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif; }
+
+body { background: var(--bg); color: var(--text-dark); }
+
+header {
+  display:flex; justify-content:space-between; align-items:center;
+  padding:1rem 5%; background:white; box-shadow:0 2px 5px rgba(0,0,0,0.1); position:sticky; top:0; z-index:100;
+}
+header .logo { font-weight:700; font-size:1.5rem; color: var(--primary); text-decoration:none; }
+header nav a { margin-left:2rem; text-decoration:none; color:var(--text-dark); font-weight:500; transition:0.3s; }
+header nav a:hover { color: var(--primary); }
+
+.hero { display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; height:90vh; background:url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat; color:white; position:relative; }
+.hero::after { content:''; position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); }
+.hero-content { position:relative; z-index:1; }
+.hero h1 { font-size:3rem; margin-bottom:1rem; }
+.hero p { font-size:1.2rem; margin-bottom:2rem; max-width:700px; }
+.btn { padding:1rem 2rem; border:none; border-radius:5px; font-weight:600; cursor:pointer; transition:0.3s; margin:0 0.5rem; text-decoration:none; display:inline-block; }
+.btn-helper { background: var(--primary); color:white; }
+.btn-helper:hover { background: #004d99; }
+.btn-receiver { background:white; color: var(--primary); }
+.btn-receiver:hover { background: #e6f0ff; }
+
+.features { padding:5rem 5%; display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:2rem; text-align:center; }
+.feature-card { background:white; padding:2rem; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.1); transition:0.3s; }
+.feature-card:hover { transform: translateY(-5px); box-shadow:0 6px 15px rgba(0,0,0,0.15); }
+.feature-card i { font-size:2rem; color: var(--primary); margin-bottom:1rem; }
+.feature-card h3 { margin-bottom:1rem; font-weight:600; }
+.feature-card p { color:#555; }
+
+.how-it-works { text-align:center; padding:5rem 5%; background:#fff; }
+.steps { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:2rem; margin-top:2rem; }
+.step-card { background: var(--bg); padding:2rem; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.1); transition:0.3s; }
+.step-card i { font-size:2rem; color: var(--accent); margin-bottom:1rem; }
+.step-card p { font-weight:600; }
+
+footer { background:#333; color:white; padding:2rem 5%; text-align:center; }
+footer a { color: var(--accent); text-decoration:none; margin:0 0.5rem; }
+
+@media(max-width:768px){
+  .hero h1 { font-size:2rem; }
+  .hero p { font-size:1rem; }
+}
